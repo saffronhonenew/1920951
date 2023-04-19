@@ -9,5 +9,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'None' })
+  //res.status(200).json({ name: 'None' })
+  res.status(200).json({ name: process.env.test ?? 'no leaking' })
+
 }
